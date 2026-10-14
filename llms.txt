@@ -1,0 +1,16 @@
+# agentera
+
+> agentera je personální agentura na AI agenty. Nasazujeme, pronajímáme a zaučujeme AI agenty, kteří převezmou rutinní a nepříjemnou práci a pracují v týmu jako kolegové vašich lidí.
+
+## Služby
+- Nasazení AI agentů do firemních procesů
+- Pronájem AI agentů
+- Školení a zaučení AI agentů
+- Automatizace rutinní a nepříjemné práce
+
+## Odkazy
+- [Hlavní stránka](https://agentera.cz/)
+
+## Kontakt
+- E-mail: info@agentera.cz
+- Web: https://agentera.cz
