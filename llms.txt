@@ -1,16 +1,34 @@
 # agentera
 
-> agentera je personální agentura na AI agenty. Nasazujeme, pronajímáme a zaučujeme AI agenty, kteří převezmou rutinní a nepříjemnou práci a pracují v týmu jako kolegové vašich lidí.
+> agentera je česká agentura pro AI agenty („éra agentů" i „agentura"). Agenty pro firmy vybírá, zaučuje, nasazuje do týmů a dlouhodobě hlídá: od jednoho asistenta přes celá oddělení až po řízení firmy a firmy či startupy na klíč. Všechno běží na jednom serveru u zákazníka (32–64 GB RAM), kompletně na open source.
 
-## Služby
-- Nasazení AI agentů do firemních procesů
-- Pronájem AI agentů
-- Školení a zaučení AI agentů
-- Automatizace rutinní a nepříjemné práce
+Kontakt: info@agentera.cz · Web: https://agentera.cz/ · Jazyk: čeština · Působnost: Česká republika
+
+## Co nabízíme
+- Jeden agent na konkrétní práci (asistentka, právník, asistent účetní, obchodní asistent).
+- Agenti zapojení do stávajících týmů a nástrojů (úkoly, chat, CRM, e-mail).
+- Celá oddělení agentů: administrativa, IT provoz, vývoj, bezpečnost.
+- Řízení firmy: jeden přehled úkolů, schvalování a kontrolor dodržování postupů.
+- Firma nebo startup na klíč: účty a přihlašování, CRM, dokumenty, fakturace, agenti a dohled za dny místo měsíců.
+
+## Týmy agentů
+- Provozní tým: Diagnostik, Prováděč, Architekt, Nasazovač, Knihovník (hlídá dokumentaci a vše zapíše).
+- Vývojový tým: Orchestrátor, Vývojář, Tester, Recenzent, Architekt, Nasazovač.
+- Vlastní bezpečnostní tým (SOC): Analytik, Bezpečnostní architekt; do systémů nezasahuje, rozhoduje člověk.
+- Backoffice: Asistentka, Právník, Asistent účetní, Obchodní asistent, Kontrolor.
+
+## Jak se agenti učí firmu
+Zmapování postupů, sepsání dokumentace, zaindexování znalostí do sdílené paměti s vyhledáváním podle významu (RAG) na serveru zákazníka, zápis poučení z chyb, automatická aktualizace paměti.
+
+## Bezpečnost a data
+Agenti dostávají jen nezbytná oprávnění, citlivé kroky schvaluje člověk. Osobní údaje se před odesláním do cloudových modelů nahrazují smyšlenými. Agenti používají špičkové modely (Claude, ChatGPT); vlastní modely na serveru se přidávají pro specifické úlohy, citlivá data nebo provoz bez internetu.
+
+## Technologie (open source)
+OPNsense, Suricata, OpenVPN/WireGuard, nginx, Let's Encrypt; FreeIPA, Authelia, Vaultwarden; Nextcloud, EspoCRM, Rocket.Chat, Forgejo, Metabase; Ollama, LiteLLM, Open WebUI, SearXNG, Langfuse; Zabbix, GnuPG, git; Linux, KVM, Docker.
+
+## Jak začít
+1. Rozhovor (30 minut). 2. Zkušební provoz na jedné úloze (2–4 týdny, měření času, chyb a nákladů). 3. Poctivé vyhodnocení. 4. Rozšíření.
 
 ## Odkazy
-- [Hlavní stránka](https://agentera.cz/)
-
-## Kontakt
-- E-mail: info@agentera.cz
-- Web: https://agentera.cz
+- [Hlavní stránka](https://agentera.cz/): celý obsah webu na jedné stránce.
+- [Mapa webu](https://agentera.cz/sitemap.xml)
