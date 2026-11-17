@@ -1,223 +1,212 @@
 <!DOCTYPE html>
-<html lang="cs"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>agentera — éra agentů přichází</title>
-<meta name="description" content="agentera — personální agentura na AI agenty. Nasadíme, pronajmeme a zaučíme AI agenty, kteří převezmou rutinní a nepříjemnou práci a pracují v týmu jako kolegové vašich lidí.">
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>agentera — váš průvodce dobou agentů</title>
+<meta name="description" content="agentera – agentura pro AI. Agenti od jednoho asistenta po celá oddělení a firmy na klíč, na vašem serveru, s dohledem a kompletně na open source.">
 <meta name="robots" content="index,follow">
-<meta name="author" content="agentera.cz">
-<meta name="theme-color" content="#0b1020">
 <link rel="canonical" href="https://agentera.cz/">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path d='M24 3l18 10.5v21L24 45 6 34.5v-21z' fill='none' stroke='%2338bdf8' stroke-width='3'/><circle cx='24' cy='18' r='5' fill='%2322d3ee'/></svg>">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="agentera">
-<meta property="og:locale" content="cs_CZ">
 <meta property="og:url" content="https://agentera.cz/">
-<meta property="og:title" content="agentera — éra agentů přichází">
-<meta property="og:description" content="Personální agentura na AI agenty. Nechte pracovat agenty, zbavte se rutiny a trénujte si vlastní — nebo vám je zapůjčíme, pronajmeme a nastavíme.">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="agentera — éra agentů přichází">
-<meta name="twitter:description" content="Personální agentura na AI agenty.">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "agentera", "url": "https://agentera.cz", "email": "info@agentera.cz", "logo": "https://agentera.cz/favicon", "description": "agentera — personální agentura na AI agenty. Nasadíme, pronajmeme a zaučíme AI agenty, kteří převezmou rutinní a nepříjemnou práci a pracují v týmu jako kolegové vašich lidí.", "slogan": "Éra agentů přichází", "areaServed": "CZ", "knowsAbout": ["AI agenti", "automatizace práce", "nasazení AI", "školení AI agentů", "pronájem AI agentů"]}</script>
-
+<meta property="og:title" content="agentera — váš průvodce dobou agentů">
+<meta property="og:description" content="agentera – agentura pro AI. Agenti od jednoho asistenta po celá oddělení a firmy na klíč, na vašem serveru, s dohledem a kompletně na open source.">
+<meta name="theme-color" content="#071016">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "agentera", "url": "https://agentera.cz", "email": "info@agentera.cz", "logo": "https://agentera.cz/agentera-logo.svg", "description": "agentera – agentura pro AI. Agenti od jednoho asistenta po celá oddělení a firmy na klíč, na vašem serveru, s dohledem a kompletně na open source.", "slogan": "Váš průvodce dobou agentů", "areaServed": "CZ"}</script>
+<link rel="icon" type="image/svg+xml" href="agentera-logo.svg">
 <style>
-  :root{--bg:#0b1020;--card:#141c30;--cyan:#38bdf8;--cyan2:#22d3ee;--txt:#e6edf6;--mut:#9fb0c7;--line:#223049}
-  *{box-sizing:border-box;margin:0;padding:0}
-  html,body{overflow-x:hidden;max-width:100%}
-  body{font-family:-apple-system,Segoe UI,Inter,Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.55;-webkit-text-size-adjust:100%}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 20px;width:100%}
-  a{color:var(--cyan);text-decoration:none}
-  img,svg{max-width:100%}
-  /* header */
-  header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0;flex-wrap:wrap}
-  .logo{display:flex;align-items:center;gap:10px;font-size:21px;font-weight:800}
-  .logo .mark{width:38px;height:38px;flex:0 0 38px}
-  .logo b{color:#fff}.logo .era{color:var(--cyan)}
-  .logo .wm{display:flex;flex-direction:column;line-height:.82;letter-spacing:.3px}
-  .nav{font-size:14px;color:var(--mut)}
-  /* hero */
-  .hero{position:relative;overflow:hidden;background:
-      radial-gradient(800px 400px at 85% -10%,rgba(56,189,248,.20),transparent 60%),
-      linear-gradient(180deg,#0b1020,#0f172a)}
-  .hnet{position:absolute;inset:0;width:100%;height:100%;opacity:.45;pointer-events:none}
-  .hero .wrap{position:relative;padding:54px 20px 64px;text-align:center}
-  .eyebrow{display:inline-block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);
-    border:1px solid rgba(56,189,248,.35);border-radius:999px;padding:6px 14px;margin-bottom:22px;background:rgba(56,189,248,.06)}
-  h1{font-size:clamp(32px,8vw,58px);line-height:1.06;margin-bottom:16px;font-weight:850;letter-spacing:-.5px}
-  h1 .g{background:linear-gradient(90deg,var(--cyan),var(--cyan2));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .lead{font-size:clamp(16px,4.3vw,20px);color:var(--mut);max-width:620px;margin:0 auto 28px}
-  .cta{display:inline-flex;gap:8px;align-items:center;justify-content:center;background:linear-gradient(90deg,var(--cyan),var(--cyan2));
-    color:#06243a;font-weight:800;padding:14px 24px;border-radius:12px;font-size:16px;box-shadow:0 10px 30px rgba(56,189,248,.22)}
-  /* sections */
-  .sec{padding:52px 0}
-  .sec h2{font-size:clamp(23px,5.5vw,32px);text-align:center;margin-bottom:8px}
-  .sec .sub{text-align:center;color:var(--mut);margin:0 auto 30px;max-width:600px}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
-  .card .ic{width:44px;height:44px;margin-bottom:12px}
-  .card h3{margin-bottom:8px;font-size:18px}
-  .card p{color:var(--mut);font-size:15px}
-  .steps{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-  .pill{border:1px solid var(--line);background:#101a2e;border-radius:999px;padding:9px 16px;font-size:14px}
-  .pill b{color:var(--cyan)}
-  .band{background:linear-gradient(90deg,rgba(56,189,248,.10),rgba(34,211,238,.05));border:1px solid var(--line);
-    border-radius:20px;padding:34px 22px;text-align:center}
-  .band .big{font-size:clamp(19px,5vw,25px);font-weight:800;margin:18px 0}
-  .band .big span{color:var(--cyan)}
-  footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mut);text-align:center;font-size:14px}
-  footer .mail{font-size:17px;font-weight:700;color:#fff;display:block;margin:6px 0}
-  /* animovaný flow "Jak to běží" */
-  .flow{position:relative;display:flex;justify-content:space-between;gap:12px;margin:28px 0 6px;padding:0 6px}
-  .flow .track{position:absolute;top:30px;left:9%;right:9%;height:3px;border-radius:3px;
-    background:linear-gradient(90deg,rgba(56,189,248,.12),rgba(56,189,248,.55),rgba(56,189,248,.12));
-    background-size:200% 100%;animation:slide 3s linear infinite}
-  .flow .pulse{position:absolute;top:25px;left:9%;width:12px;height:12px;border-radius:50%;
-    background:var(--cyan2);box-shadow:0 0 14px 4px rgba(34,211,238,.7);animation:runx 4.5s ease-in-out infinite}
-  .node{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:9px}
-  .node .ring{width:62px;height:62px;border-radius:16px;display:grid;place-items:center;background:#101a2e;
-    border:1px solid var(--line);animation:glow 3s ease-in-out infinite;animation-delay:var(--d)}
-  .node .ring svg{width:28px;height:28px}
-  .node .lbl{font-size:13px;color:var(--mut)}.node .num{color:var(--cyan);font-weight:800}
-  @keyframes slide{to{background-position:-200% 0}}
-  @keyframes runx{0%{left:9%}48%{left:91%}52%{left:91%}100%{left:9%}}
-  @keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(56,189,248,0);transform:translateY(0)}
-    50%{box-shadow:0 0 22px 2px rgba(56,189,248,.35);transform:translateY(-5px);border-color:rgba(56,189,248,.6)}}
-  @media(max-width:760px){
-    .grid{grid-template-columns:1fr}
-    .hero .wrap{padding:40px 18px 48px}
-    .cta{display:flex;width:100%}
-    .nav{width:100%}
-    .flow{flex-direction:column;gap:16px;padding-left:40px}
-    .flow .track{top:8px;bottom:8px;left:18px;right:auto;width:3px;height:auto;
-      background:linear-gradient(180deg,rgba(56,189,248,.12),rgba(56,189,248,.55),rgba(56,189,248,.12));background-size:100% 200%;animation:slidev 3s linear infinite}
-    .flow .pulse{left:13px;top:8px;animation:runy 4.5s ease-in-out infinite}
-    .node{flex-direction:row;gap:14px;text-align:left}
-  }
-  @keyframes slidev{to{background-position:0 -200%}}
-  @keyframes runy{0%{top:2%}48%{top:94%}52%{top:94%}100%{top:2%}}
-  /* tým agentů */
-  .team{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:18px}
-  .team .col{display:flex;flex-direction:column;align-items:center}
-  .team .grp{display:flex;gap:12px}
-  .team .ar{color:var(--cyan);font-weight:700;font-size:13px;white-space:nowrap}
-  .team .ring{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;background:#101a2e;
-    border:1px solid var(--line);animation:glow 3s ease-in-out infinite;animation-delay:var(--d)}
-  .team .ring svg{width:28px;height:28px}
-  .team .lbl{font-size:12px;color:var(--mut);margin-top:6px}
-  /* handoff – odlétající úkoly */
-  .lane{position:relative;flex:1 1 170px;min-width:140px;max-width:300px;height:78px}
-  .lane .rail{position:absolute;top:50%;left:0;right:0;height:2px;transform:translateY(-50%);
-    background:linear-gradient(90deg,transparent,rgba(56,189,248,.45),transparent)}
-  .lane .hint{position:absolute;top:-4px;left:50%;transform:translateX(-50%);font-size:11px;color:#6b7c96;white-space:nowrap}
-  .task{position:absolute;display:flex;align-items:center;gap:6px;background:#0e1830;border:1px solid var(--line);
-    border-radius:999px;padding:5px 11px;font-size:11px;color:var(--txt);white-space:nowrap;box-shadow:0 2px 10px rgba(0,0,0,.35);
-    animation:fly 3.9s ease-in-out infinite}
-  .task svg{width:13px;height:13px}
-  @keyframes fly{0%{left:-14%;opacity:0;transform:scale(.85)}10%{opacity:1;transform:scale(1)}
-    82%{opacity:1;left:86%}95%{opacity:0;left:104%;transform:scale(.8)}100%{opacity:0;left:104%}}
-  @media(max-width:760px){.lane{flex-basis:100%;max-width:none;height:84px}}
-  @media(prefers-reduced-motion:reduce){.flow .pulse,.flow .track,.node .ring,.team .ring,.task{animation:none}}
-</style></head>
+:root{--bg:#071016;--deep:#0e3b3a;--mid:#1fa88a;--mint:#72e5ba;--glow:#b8ffe6;--text:#e6fff6;--muted:#9fc9bb;--card:rgba(9,26,30,.72);--edge:rgba(114,229,186,.18);--warn:#f2a93b;--bad:#ef6b6b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.55;overflow-x:hidden}
+#bg{position:fixed;inset:0;z-index:-2;overflow:hidden}#bg-in{position:absolute;inset:-70%;background:url(velin-bg.webp) 0 0/1500px auto repeat;transform:rotate(-14deg);filter:brightness(1.75) saturate(1.15);will-change:background-position,translate;animation:jizda 200s linear infinite}@keyframes jizda{from{background-position:0 0}to{background-position:-1500px -3334px}}@media(max-width:760px){#bg-in{background-size:1100px auto;animation-name:jizdam;animation-duration:150s}@keyframes jizdam{from{background-position:0 0}to{background-position:-1100px -2445px}}}
+#bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0,rgba(7,16,22,.2),rgba(7,16,22,.55) 80%),linear-gradient(180deg,rgba(7,16,22,.15),rgba(7,16,22,.45))}
+a{color:var(--mint)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;backdrop-filter:blur(10px);background:rgba(7,16,22,.6);border-bottom:1px solid var(--edge)}
+header .wrap{display:flex;align-items:center;gap:14px;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+.brand img{width:44px;height:44px;filter:drop-shadow(0 0 10px #3bcba555)}
+.brand b{font-size:22px;letter-spacing:.5px}.brand small{display:block;font-size:10.5px;letter-spacing:3px;color:var(--mint);font-weight:600}
+nav{margin-left:auto;display:flex;gap:18px;font-size:14px}nav a{color:var(--muted);text-decoration:none}nav a:hover{color:var(--mint)}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--mint),var(--mid));color:#03211b;font-weight:700;padding:12px 22px;border-radius:999px;text-decoration:none;box-shadow:0 0 24px #1fa88a55}
+.btn.ghost{background:none;color:var(--mint);border:1px solid var(--mint);box-shadow:none}
+.hero{min-height:88vh;display:flex;align-items:center;padding:60px 0}
+.hero .logo{width:120px;height:120px;filter:drop-shadow(0 0 22px #3bcba577)}
+.eyebrow{color:var(--mint);letter-spacing:3px;font-size:12px;font-weight:700;text-transform:uppercase}
+h1{font-size:clamp(36px,6vw,68px);line-height:1.05;margin:14px 0 18px;letter-spacing:-.5px}
+h1 span{background:linear-gradient(120deg,var(--glow),var(--mid));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(17px,2.2vw,21px);color:#cdeee2;max-width:720px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+section{padding:80px 0}
+h2{font-size:clamp(26px,4vw,40px);margin:8px 0 14px;letter-spacing:-.3px}
+.sub{color:var(--muted);max-width:760px;font-size:17px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:30px}
+.card{background:var(--card);border:1px solid var(--edge);border-radius:18px;padding:22px;backdrop-filter:blur(6px)}
+.card h3{margin:0 0 8px;font-size:19px}.card p{margin:0;color:#c3e4d8;font-size:15px}
+.fail h3{color:#ffd9a8}.fail .ico{font-size:26px}
+.fix{margin-top:12px;padding-top:12px;border-top:1px dashed var(--edge);color:var(--mint)!important;font-size:14.5px!important}
+.fix::before{content:"Jak to řešíme: ";font-weight:700}
+.steps{counter-reset:s;display:grid;gap:14px;margin-top:30px}
+.step{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--edge);border-radius:16px;padding:18px 20px}
+.step::before{counter-increment:s;content:counter(s);flex:0 0 40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#03211b;background:var(--mint)}
+.step b{display:block;font-size:17px}.step span{color:#c3e4d8;font-size:15px}
+.ladder{display:grid;gap:10px;margin-top:30px}
+.rung{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;background:var(--card);border:1px solid var(--edge);border-radius:16px;padding:16px 20px}
+.rung i{font-style:normal;font-size:28px}.rung b{font-size:17px}.rung p{margin:2px 0 0;color:#c3e4d8;font-size:14.5px}
+.rung:nth-child(1){margin-right:40%}.rung:nth-child(2){margin-right:30%}.rung:nth-child(3){margin-right:20%}.rung:nth-child(4){margin-right:10%}
+.team{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.agent{width:132px;text-align:center;font-size:13.5px;color:var(--muted)}
+.agent img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:2px solid var(--edge);box-shadow:0 0 18px #1fa88a44;display:block;margin:0 auto 8px}
+.agent b{display:block;color:var(--text);font-size:14.5px}
+.pillars{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:26px}
+.pill{border-radius:16px;padding:18px;border:1px solid}
+.pill.ops{border-color:#16a34a66;background:rgba(22,163,74,.10)}.pill.dev{border-color:#d9770666;background:rgba(217,119,6,.10)}.pill.sec{border-color:#2563eb66;background:rgba(37,99,235,.12)}
+.pill b{font-size:18px}.pill p{margin:6px 0 0;color:#c3e4d8;font-size:14.5px}
+.split{display:grid;gap:30px;grid-template-columns:1.1fr .9fr;align-items:center}
+.brain{width:100%;max-width:420px;mix-blend-mode:screen;-webkit-mask-image:radial-gradient(ellipse 50% 48% at 50% 50%,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 50% 48% at 50% 50%,#000 60%,transparent 100%);filter:drop-shadow(0 0 30px #1fa88a66);justify-self:center;animation:dych 6s ease-in-out infinite}
+@keyframes dych{50%{transform:scale(1.03);filter:drop-shadow(0 0 44px #72e5ba88)}}
+.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:20px}
+.spec{background:var(--card);border:1px solid var(--edge);border-radius:14px;padding:14px;text-align:center}
+.spec b{display:block;font-size:24px;color:var(--mint)}.spec span{font-size:13px;color:var(--muted)}
+.final{text-align:center;padding:100px 0}
+.final .card{max-width:760px;margin:0 auto;padding:40px 28px;background:linear-gradient(160deg,rgba(14,59,58,.85),rgba(7,16,22,.85))}
+footer{border-top:1px solid var(--edge);padding:28px 0;color:#6f9e90;font-size:13px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}.reveal.on{opacity:1;transform:none}
+.stack{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:26px}.sg{background:var(--card);border:1px solid var(--edge);border-radius:16px;padding:18px 20px}.sg h3{margin:0 0 8px;font-size:17px;color:var(--mint)}.sg p{margin:0;color:#c3e4d8;font-size:14.5px;line-height:1.7}.sg b{color:var(--text)}.note{color:var(--muted);font-size:14px;margin-top:18px}
+.ic{display:block;width:46px;height:46px;padding:10px;margin-bottom:12px;border-radius:13px;background:linear-gradient(145deg,#0e3b3a,#071016);border:1px solid #72e5ba55;box-shadow:0 0 18px #1fa88a33,inset 0 0 12px #1fa88a22;stroke:var(--mint);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;overflow:visible}.ic use{filter:drop-shadow(0 0 3px #72e5ba88)}.ic.s{display:inline-block;width:32px;height:32px;padding:6px;margin:0 10px 0 0;border-radius:9px;vertical-align:middle}.ic.m{margin:0 auto 6px;width:40px;height:40px;padding:8px}.rung .ic{margin:0}
+.tymy-h{margin:34px 0 0;font-size:22px}.tymy{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,470px),1fr));margin-top:16px}.tym{border-radius:18px;padding:20px;border:1px solid;background:var(--card)}.tym.ops{border-color:#16a34a77;background:rgba(22,163,74,.09)}.tym.dev{border-color:#d9770677;background:rgba(217,119,6,.09)}.tym.sec{border-color:#2563eb77;background:rgba(37,99,235,.11)}.tym.bo{border-color:#72e5ba66;background:rgba(31,168,138,.09)}.tym-h{display:flex;align-items:center}.tym h3{margin:0;font-size:19px}.tym small{color:var(--muted);font-size:13px}.tym>p{color:#c3e4d8;font-size:14.5px;margin:12px 0 14px}.ags{display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:10px 6px}.ag{min-width:0;text-align:center;font-size:12px;color:var(--muted);line-height:1.3}.ag b{display:block;color:var(--text);font-size:12px;letter-spacing:-.1px;margin-top:6px}.ag img{width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid var(--edge);box-shadow:0 0 14px #1fa88a44;display:block;margin:0 auto}.ic.t{width:60px;height:60px;padding:15px;margin:0 auto;border-radius:50%}
+@media(max-width:760px){nav{display:none}.split{grid-template-columns:1fr}.rung{margin-right:0!important}.hero{min-height:auto;padding-top:40px}section{padding:56px 0}}
+@media(prefers-reduced-motion:reduce){#bg-in{animation:none}.reveal{opacity:1;transform:none}.brain{animation:none}}
+</style>
+</head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-mince" viewBox="0 0 24 24"><ellipse cx="9" cy="6" rx="6" ry="2.5"/><path d="M3 6v4c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V6M3 10v4c0 1.4 2.7 2.5 6 2.5"/><path d="M18 11v8m-3-3 3 3 3-3"/></symbol><symbol id="i-ukazka" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M10 8v4M14 8v4"/></symbol><symbol id="i-chyba" viewBox="0 0 24 24"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4M12 17h.01"/></symbol><symbol id="i-zamek" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3M12 15v2"/></symbol><symbol id="i-mimo" viewBox="0 0 24 24"><circle cx="7" cy="9" r="3"/><path d="M2 20c0-3 2.2-5 5-5s5 2 5 5"/><rect x="15" y="6" width="7" height="6" rx="1.5"/><path d="M17.3 9h.01M19.7 9h.01M18.5 12v2M13.5 3v18" stroke-dasharray="1.5 2.5"/></symbol><symbol id="i-stit" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol><symbol id="i-robot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 5v3M9 13h.01M15 13h.01M9 16.5h6"/><circle cx="12" cy="4" r="1"/></symbol><symbol id="i-lide" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c2.5 0 4.5 2 4.5 5"/></symbol><symbol id="i-budova" viewBox="0 0 24 24"><rect x="4" y="3" width="11" height="18" rx="1"/><path d="M15 9h5v12h-5M8 7h3M8 11h3M8 15h3M3 21h18"/></symbol><symbol id="i-kompas" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></symbol><symbol id="i-raketa" viewBox="0 0 24 24"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2"/><path d="M9 15 6 12c1.5-4.5 5.5-8.5 12-9-.5 6.5-4.5 10.5-9 12z"/><circle cx="14.5" cy="9.5" r="1.6"/></symbol><symbol id="i-ozubeni" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></symbol><symbol id="i-kod" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol><symbol id="i-zed" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9.3h18M3 14.7h18M9 4v5.3M15 9.3v5.4M9 14.7V20"/></symbol><symbol id="i-klic" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M15 8l2 2"/></symbol><symbol id="i-kufr" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18"/></symbol><symbol id="i-cip" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/><circle cx="12" cy="12" r="1.5"/></symbol><symbol id="i-puls" viewBox="0 0 24 24"><path d="M3 12h4l2-6 4 12 2-6h6"/></symbol><symbol id="i-vrstvy" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></symbol><symbol id="i-fajfka" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol><symbol id="i-proces" viewBox="0 0 24 24"><rect x="3" y="4" width="6" height="5" rx="1"/><rect x="15" y="4" width="6" height="5" rx="1"/><rect x="9" y="15" width="6" height="5" rx="1"/><path d="M9 6.5h6M18 9v3h-6v3"/></symbol><symbol id="i-dokument" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></symbol><symbol id="i-index" viewBox="0 0 24 24"><ellipse cx="10" cy="6" rx="6" ry="2.5"/><path d="M4 6v8c0 1.4 2.7 2.5 6 2.5M16 6v3"/><circle cx="17" cy="16" r="3"/><path d="m19.2 18.2 2.3 2.3"/></symbol><symbol id="i-zarovka" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol><symbol id="i-pamet" viewBox="0 0 24 24"><circle cx="6" cy="7" r="2"/><circle cx="18" cy="7" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M7.7 8.2 10.3 11M16.3 8.2 13.7 11M10.3 13l-2.6 3.8M13.7 13l2.6 3.8M8 7h8"/></symbol><symbol id="i-lupa" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5M8 10.5h5M10.5 8v5"/></symbol><symbol id="i-obalka" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></symbol><symbol id="i-vahy" viewBox="0 0 24 24"><path d="M12 4v16M7 20h10M5 7h14M7 7l-3 6a3 3 0 0 0 6 0zM17 7l-3 6a3 3 0 0 0 6 0z"/></symbol><symbol id="i-kalk" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></symbol><symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol><symbol id="i-seznam" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M8.5 10l1.5 1.5L13 8.5M8.5 16l1.5 1.5L13 14.5M15 10h1M15 16h1"/></symbol><symbol id="i-radar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 12 18 6M12 3v2"/></symbol></svg>
+<div id="bg" aria-hidden="true"><div id="bg-in"></div></div>
 
-<section class="hero">
- <svg class="hnet" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-  <g stroke="#2b5d78" stroke-width="1">
-   <line x1="120" y1="80" x2="320" y2="200"/><line x1="320" y1="200" x2="520" y2="120"/>
-   <line x1="520" y1="120" x2="760" y2="260"/><line x1="760" y1="260" x2="980" y2="150"/>
-   <line x1="320" y1="200" x2="420" y2="380"/><line x1="760" y1="260" x2="640" y2="420"/></g>
-  <g fill="#38bdf8"><circle cx="120" cy="80" r="4"/><circle cx="320" cy="200" r="5"/><circle cx="520" cy="120" r="4"/>
-   <circle cx="760" cy="260" r="6" fill="#22d3ee"/><circle cx="980" cy="150" r="4"/><circle cx="420" cy="380" r="4"/><circle cx="640" cy="420" r="4"/></g>
- </svg>
- <div class="wrap">
-  <header>
-   <div class="logo">
-    <svg class="mark" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-     <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-       <stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
-     <path d="M24 3l18 10.5v21L24 45 6 34.5v-21z" fill="none" stroke="url(#g)" stroke-width="2.4"/>
-     <line x1="24" y1="14" x2="15" y2="30" stroke="#2b6f8c" stroke-width="2"/>
-     <line x1="24" y1="14" x2="33" y2="30" stroke="#2b6f8c" stroke-width="2"/>
-     <line x1="15" y1="30" x2="33" y2="30" stroke="#2b6f8c" stroke-width="2"/>
-     <circle cx="24" cy="14" r="4.4" fill="#22d3ee"/>
-     <circle cx="15" cy="30" r="3.4" fill="#38bdf8"/><circle cx="33" cy="30" r="3.4" fill="#38bdf8"/></svg>
-    <div class="wm"><b>agent</b><span class="era">era</span></div>
-   </div>
-   <div class="nav">info@agentera.cz</div>
-  </header>
+<header><div class="wrap">
+ <a class="brand" href="#"><img src="agentera-logo.svg" alt=""><span><b>agentera</b><small>AGENTURA PRO AI</small></span></a>
+ <nav><a href="#proc">Kde to drhne</a><a href="#nabidka">Co nabízíme</a><a href="#agentura">Agentura</a><a href="#uceni">Učení</a><a href="#u-vas">U vás</a><a href="#zacit">Jak začít</a><a href="#stack">Open source</a></nav>
+</div></header>
 
-  <div style="padding-top:22px">
-   <span class="eyebrow">Personální agentura na AI agenty</span>
-   <h1>Éra agentů <span class="g">přichází</span></h1>
-   <p class="lead">Nechte pracovat agenty. Zbavte se rutiny — a trénujte si vlastní.
-     A když na to nebudete stačit sami, <b style="color:#fff">zapůjčíme, pronajmeme a nastavíme</b> je za vás.</p>
-   <a class="cta" href="mailto:info@agentera.cz">Napište nám — info@agentera.cz</a>
-  </div>
- </div>
-</section>
+<main>
+<section class="hero"><div class="wrap">
+ <img class="logo" src="agentera-logo.svg" alt="">
+ <div class="eyebrow">Éra agentů je tady</div>
+ <h1>Váš průvodce<br><span>dobou agentů.</span></h1>
+ <p class="lead">Nasadit AI agenty může být jednodušší, než se zdá. Jen je potřeba vědět <b>jak</b>. Zkoušeli jste to a nevyšlo? Nevyplatilo se to, agent dělal chyby, nebo zkušební projekt skončil v šuplíku? <b>Pak to pojďte zkusit s námi.</b></p>
+ <div class="cta"><a class="btn" href="#zacit">Pojďte to zkusit s námi</a><a class="btn ghost" href="#proc">Proč to často nevyjde</a></div>
+</div></section>
 
-<section class="sec"><div class="wrap">
- <h2>Co pro vás agenti udělají</h2>
- <p class="sub">Tři způsoby, jak vám AI agenti ušetří čas a lidi.</p>
+<section id="proc"><div class="wrap reveal">
+ <div class="eyebrow">Upřímně</div>
+ <h2>Proč to firmám často nevyjde</h2>
+ <p class="sub">Tohle slyšíme nejčastěji. Všechno jsme si vyzkoušeli sami ve vlastním provozu, takže víme, kde jsou nástrahy.</p>
  <div class="grid">
-  <div class="card">
-   <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/><path d="M19 7l1.6 1.6L23 6" stroke="#22d3ee"/></svg>
-   <h3>Nechte pracovat agenty</h3>
-   <p>Rutinu, výkazy, hlídání a reporty převezmou AI agenti, co makají 24/7 — bez přestávek.</p>
-  </div>
-  <div class="card">
-   <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="4.2" stroke="#22d3ee"/></svg>
-   <h3>Zbavte se rutiny, trénujte agenty</h3>
-   <p>Naučíme vás i váš tým agenty stavět, zaučovat a řídit — ať je máte pod kontrolou.</p>
-  </div>
-  <div class="card">
-   <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8"><path d="M4 7h16v12H4z"/><path d="M8 7V5h8v2M9 12h6" stroke="#22d3ee"/></svg>
-   <h3>Nestíháte sami? Pomůžeme</h3>
-   <p>Zapůjčíme, pronajmeme, nasadíme a nastavíme agenty na míru — od konzultace po provoz.</p>
-  </div>
+  <div class="card fail"><svg class="ic" aria-hidden="true"><use href="#i-mince"/></svg><h3>Nevyplatí se to</h3><p>Účty za AI rostou rychleji, než přibývá ušetřeného času. Nikdo neměří, co agent stojí a co přinesl.</p><p class="fix">pro každý úkol vybereme vhodný model a měříme náklady i přínos. Kde se to vyplatí, přidáme levnější model přímo na váš server.</p></div>
+  <div class="card fail"><svg class="ic" aria-hidden="true"><use href="#i-ukazka"/></svg><h3>Zůstalo to u ukázky</h3><p>Na prezentaci to vypadalo skvěle. V běžném provozu se o agenta nikdo nestaral a ten potichu přestal fungovat.</p><p class="fix">o agenty se staráme i po spuštění: hlídáme je, opravujeme, sepisujeme postupy a každý měsíc vyhodnotíme, co přinesli.</p></div>
+  <div class="card fail"><svg class="ic" aria-hidden="true"><use href="#i-chyba"/></svg><h3>Neposlouchá a vymýšlí si</h3><p>Nedrží se zadání, sebejistě si vymýšlí (odborně „halucinuje“), dělá chyby, nedotahuje úkoly a nikdo neví, co vlastně udělal.</p><p class="fix">agent má jasná pravidla, fakta ověřuje ve vašich dokumentech, každý úkol má svůj záznam, práci kontroluje druhý agent a citlivé věci schvalujete vy jedním ťuknutím v telefonu.</p></div>
+  <div class="card fail"><svg class="ic" aria-hidden="true"><use href="#i-zamek"/></svg><h3>Data nesmí do cloudu</h3><p>Rodná čísla, čísla účtů, smlouvy. Ochrana osobních údajů a mlčenlivost zastaví projekt dřív, než začne.</p><p class="fix">osobní údaje před odesláním nahradíme smyšlenými, ty skutečné zůstávají u vás.</p></div>
+  <div class="card fail"><svg class="ic" aria-hidden="true"><use href="#i-mimo"/></svg><h3>Agent stojí mimo tým</h3><p>Má vlastní aplikaci, kam nikdo nechodí. Lidé ho obcházejí a není jasné, kdo za co odpovídá.</p><p class="fix">agenti pracují tam, kde pracujete vy: v úkolech, v chatu, v CRM a v e-mailu.</p></div>
+  <div class="card fail"><svg class="ic" aria-hidden="true"><use href="#i-stit"/></svg><h3>Obava o bezpečnost</h3><p>Agent, který může na serveru cokoli, je noční můra každého správce.</p><p class="fix">agent dostane jen ta oprávnění, která nutně potřebuje, a bez vašeho souhlasu nic nezmění.</p></div>
  </div>
 </div></section>
 
-<section class="sec" style="padding-top:0"><div class="wrap">
- <div class="band" style="margin-bottom:22px">
-  <h2>Kolegové, co neodmlouvají</h2>
-  <p class="sub" style="margin-bottom:4px">Nechte agenty pracovat v&nbsp;týmu a jako tým. Pořiďte svým zaměstnancům kolegy, na které přenesou tu nepříjemnou práci.</p>
-  <div class="team">
-   <div class="col"><div class="ring" style="--d:0s"><svg viewBox="0 0 24 24" fill="none" stroke="#e6edf6" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/></svg></div><div class="lbl">váš člověk</div></div>
-   <div class="lane">
-    <div class="rail"></div>
-    <div class="hint">nepříjemnou práci&nbsp;→</div>
-    <div class="task" style="top:8px;animation-delay:0s"><svg viewBox="0 0 24 24" fill="none" stroke="#9fb0c7" stroke-width="2"><path d="M6 3h8l4 4v14H6z"/><path d="M9 12h6M9 16h6"/></svg>výkazy</div>
-    <div class="task" style="top:33px;animation-delay:1.3s"><svg viewBox="0 0 24 24" fill="none" stroke="#9fb0c7" stroke-width="2"><path d="M4 19V5M9 19v-6M14 19v-9M19 19V8"/></svg>reporty</div>
-    <div class="task" style="top:56px;animation-delay:2.6s"><svg viewBox="0 0 24 24" fill="none" stroke="#9fb0c7" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>rutina</div>
-   </div>
-   <div class="col"><div class="grp">
-     <div class="ring" style="--d:.3s"><svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linejoin="round"><rect x="5" y="8" width="14" height="10" rx="2.5"/><path d="M12 5v3"/><circle cx="12" cy="4" r="1"/><circle cx="9.5" cy="13" r="1.1" fill="#22d3ee" stroke="none"/><circle cx="14.5" cy="13" r="1.1" fill="#22d3ee" stroke="none"/></svg></div>
-     <div class="ring" style="--d:.6s"><svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linejoin="round"><rect x="5" y="8" width="14" height="10" rx="2.5"/><path d="M12 5v3"/><circle cx="12" cy="4" r="1"/><circle cx="9.5" cy="13" r="1.1" fill="#22d3ee" stroke="none"/><circle cx="14.5" cy="13" r="1.1" fill="#22d3ee" stroke="none"/></svg></div>
-     <div class="ring" style="--d:.9s"><svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linejoin="round"><rect x="5" y="8" width="14" height="10" rx="2.5"/><path d="M12 5v3"/><circle cx="12" cy="4" r="1"/><circle cx="9.5" cy="13" r="1.1" fill="#22d3ee" stroke="none"/><circle cx="14.5" cy="13" r="1.1" fill="#22d3ee" stroke="none"/></svg></div>
-   </div><div class="lbl">tým agentů</div></div>
-  </div>
- </div>
- <div class="band">
-  <h2>Jak to u nás běží</h2>
-  <p class="sub" style="margin-bottom:2px">Od prvního hovoru po agenty v provozu.</p>
-  <div class="flow">
-   <div class="track"></div><span class="pulse"></span>
-   <div class="node" style="--d:0s"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linejoin="round"><path d="M4 5h16v10H9l-5 4z"/></svg></div><div class="lbl"><span class="num">1</span> Konzultace</div></div>
-   <div class="node" style="--d:.5s"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3c4 2 5 6 5 9l-5 3-5-3c0-3 1-7 5-9z"/><circle cx="12" cy="9" r="1.6"/><path d="M8 18l-1 3M16 18l1 3" stroke="#22d3ee"/></svg></div><div class="lbl"><span class="num">2</span> Nasazení</div></div>
-   <div class="node" style="--d:1s"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linejoin="round"><rect x="5" y="8" width="14" height="10" rx="2.5"/><path d="M12 5v3"/><circle cx="12" cy="4" r="1"/><circle cx="9.5" cy="13" r="1.1" fill="#22d3ee" stroke="none"/><circle cx="14.5" cy="13" r="1.1" fill="#22d3ee" stroke="none"/></svg></div><div class="lbl"><span class="num">3</span> Pronájem agentů</div></div>
-   <div class="node" style="--d:1.5s"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linejoin="round"><path d="M3 9l9-4 9 4-9 4z"/><path d="M7 11v4c0 1.3 10 1.3 10 0v-4"/><path d="M21 9v4" stroke="#22d3ee"/></svg></div><div class="lbl"><span class="num">4</span> Zaučení</div></div>
-   <div class="node" style="--d:2s"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round"><path d="M4 16a8 8 0 0 1 16 0"/><path d="M12 16l4-3" stroke="#22d3ee"/><circle cx="12" cy="16" r="1.3" fill="#22d3ee" stroke="none"/></svg></div><div class="lbl"><span class="num">5</span> Provoz &amp; dohled</div></div>
-  </div>
-  <p class="big">Éra agentů <span>začíná u vás.</span></p>
-  <a class="cta" href="mailto:info@agentera.cz">Ozvěte se — info@agentera.cz</a>
+<section id="nabidka"><div class="wrap reveal">
+ <div class="eyebrow">Od jednoho agenta po firmu na klíč</div>
+ <h2>Začněte malým krokem. Přidávejte, až uvidíte výsledky.</h2>
+ <div class="ladder">
+  <div class="rung"><svg class="ic" aria-hidden="true"><use href="#i-robot"/></svg><div><b>Jeden agent</b><p>Asistentka, právník, účetní nebo obchodník na jednu konkrétní práci, která vás dnes zdržuje.</p></div></div>
+  <div class="rung"><svg class="ic" aria-hidden="true"><use href="#i-lide"/></svg><div><b>Agent ve vašem týmu</b><p>Agenti se zapojí do vašich týmů a nástrojů. Lidé zůstávají, otravná rutina mizí.</p></div></div>
+  <div class="rung"><svg class="ic" aria-hidden="true"><use href="#i-budova"/></svg><div><b>Celé oddělení</b><p>Administrativa, IT, vývoj nebo bezpečnost. Tým agentů, kde má každý svou roli, práci si předávají a všechno je pod dohledem.</p></div></div>
+  <div class="rung"><svg class="ic" aria-hidden="true"><use href="#i-kompas"/></svg><div><b>Řízení firmy</b><p>Jeden přehled pro celou firmu: úkoly, schvalování, čísla a kontrolor, který hlídá, že se dodržují postupy.</p></div></div>
+  <div class="rung"><svg class="ic" aria-hidden="true"><use href="#i-raketa"/></svg><div><b>Firma / startup na klíč</b><p>Účty a přihlašování, CRM, dokumenty, fakturace, agenti i dohled. Za dny místo měsíců a s minimálními náklady.</p></div></div>
  </div>
 </div></section>
 
-<footer><div class="wrap">
- <div class="logo" style="justify-content:center;margin-bottom:8px"><div class="wm" style="text-align:center"><b>agent</b><span class="era">era</span></div></div>
- Personální agentura na AI agenty
- <span class="mail">info@agentera.cz</span>
- <div style="font-size:12px;color:#6b7c96">Zatím ve výstavbě — rádi vše probereme. © 2026 agentera.cz</div>
-</div></footer>
+<section id="agentura"><div class="wrap reveal">
+ <div class="split">
+  <div>
+   <div class="eyebrow">agent·era = agentura</div>
+   <h2>Jako personální agentura. Jen pro AI.</h2>
+   <p class="sub">Agenty <b>vybereme</b> (správný model na správnou práci), <b>vycvičíme</b> (vaše postupy a znalosti firmy), <b>nasadíme</b> do týmu a pak je <b>hlídáme</b>: jak pracují, kde chybují a kolik stojí. Když agent nefunguje, vyměníme ho.</p>
+  </div>
+  <img class="brain" src="mozek.webp" alt="Sdílená paměť agentů">
+ </div>
+ <h3 class="tymy-h">Naše týmy agentů</h3>
+ <div class="tymy"><div class="tym ops"><div class="tym-h"><svg class="ic s" aria-hidden="true"><use href="#i-ozubeni"/></svg><div><h3>Provozní tým</h3><small>hlídá servery a aplikace nonstop</small></div></div><p>Když se něco pokazí, tým to převezme od poplachu až po opravu. Diagnostik najde příčinu, prováděč navrhne opravu, architekt posoudí rizika, nasazovač ji provede a knihovník všechno zapíše a hlídá, aby dokumentace odpovídala skutečnosti.</p><div class="ags"><div class="ag"><img src="agent-diagnostik.webp" alt=""><b>Diagnostik</b><span>najde příčinu</span></div><div class="ag"><img src="agent-provadec.webp" alt=""><b>Prováděč</b><span>navrhne opravu</span></div><div class="ag"><img src="agent-architekt.webp" alt=""><b>Architekt</b><span>posoudí rizika</span></div><div class="ag"><img src="agent-nasazovac.webp" alt=""><b>Nasazovač</b><span>provede změnu</span></div><div class="ag"><img src="agent-knihovnik.webp" alt=""><b>Knihovník</b><span>hlídá dokumentaci a vše zapíše</span></div></div></div><div class="tym dev"><div class="tym-h"><svg class="ic s" aria-hidden="true"><use href="#i-kod"/></svg><div><h3>Vývojový tým</h3><small>od zadání po spuštění</small></div></div><p>Zadání rozdělí orchestrátor, vývojář napíše kód, tester ověří, že funguje, recenzent ho zkontroluje a architekt hlídá, aby to dávalo smysl jako celek. Do provozu nejde nic bez testů a kontroly.</p><div class="ags"><div class="ag"><img src="agent-orchestrator.webp" alt=""><b>Orchestrátor</b><span>řídí práci</span></div><div class="ag"><img src="agent-vyvoj.webp" alt=""><b>Vývojář</b><span>píše kód</span></div><div class="ag"><img src="agent-tester.webp" alt=""><b>Tester</b><span>ověří funkčnost</span></div><div class="ag"><img src="agent-recenzent.webp" alt=""><b>Recenzent</b><span>zkontroluje kód</span></div><div class="ag"><img src="agent-architekt.webp" alt=""><b>Architekt</b><span>hlídá návrh</span></div><div class="ag"><img src="agent-nasazovac.webp" alt=""><b>Nasazovač</b><span>spustí změnu</span></div></div></div><div class="tym sec"><div class="tym-h"><svg class="ic s" aria-hidden="true"><use href="#i-stit"/></svg><div><h3>Vlastní bezpečnostní tým (SOC)</h3><small>bezpečnostní dohled 24 hodin denně</small></div></div><p>Průběžně vyhodnocuje výstrahy z detekce útoků, přihlášení a logů. Analytik každé podezření vyšetří, bezpečnostní architekt ho nezávisle posoudí. Tým do systémů sám nezasahuje, rozhodujete vy.</p><div class="ags"><div class="ag"><img src="agent-analytik.webp" alt=""><b>Analytik</b><span>vyšetří podezření</span></div><div class="ag"><img src="agent-bezpecnostni-architekt.webp" alt=""><b>Bezpečnostní architekt</b><span>nezávisle posoudí</span></div></div></div><div class="tym bo"><div class="tym-h"><svg class="ic s" aria-hidden="true"><use href="#i-kufr"/></svg><div><h3>Backoffice</h3><small>administrativa bez papírování</small></div></div><p>Agenti pro běžný chod firmy pracují v úkolech, CRM a poště. Nic nejde ven a nic se nezaplatí bez vašeho schválení.</p><div class="ags"><div class="ag"><img src="agent-asistentka.webp" alt=""><b>Asistentka</b><span>pošta, termíny, úkoly</span></div><div class="ag"><img src="agent-pravnik.webp" alt=""><b>Právník</b><span>smlouvy a stanoviska</span></div><div class="ag"><img src="agent-ucetni.webp" alt=""><b>Asistent účetní</b><span>podklady a faktury</span></div><div class="ag"><img src="agent-obchodnik.webp" alt=""><b>Obchodní asistent</b><span>nabídky a CRM</span></div><div class="ag"><img src="agent-kontrolor.webp" alt=""><b>Kontrolor</b><span>přístupy, schválení, platby</span></div></div></div></div>
+</div></section>
 
-</body></html>
+<section id="uceni"><div class="wrap reveal">
+ <div class="eyebrow">Bez znalosti firmy je i nejlepší model k ničemu</div>
+ <h2>Jak se agenti naučí vaši firmu</h2>
+ <p class="sub">Model sám o vaší firmě nic neví. Rozdíl mezi hračkou a spolehlivým kolegou dělá to, co mu dáte k dispozici: vaše postupy, dokumenty a zkušenosti.</p>
+ <div class="grid">
+  <div class="card"><svg class="ic" aria-hidden="true"><use href="#i-proces"/></svg><h3>Zmapujeme postupy</h3><p>Kdo co dělá, kdo co schvaluje a kde si lidé předávají práci. Z toho vzniknou jasná pravidla pro agenty.</p></div>
+  <div class="card"><svg class="ic" aria-hidden="true"><use href="#i-dokument"/></svg><h3>Sepíšeme dokumentaci</h3><p>Postupy, smlouvy, ceníky, návody i odpovědi na časté dotazy převedeme do podoby, se kterou agenti umí pracovat.</p></div>
+  <div class="card"><svg class="ic" aria-hidden="true"><use href="#i-index"/></svg><h3>Znalosti zaindexujeme</h3><p>Všechno uložíme do sdílené paměti, ve které agenti hledají podle smyslu, ne jen podle slov (odborně RAG). Data zůstávají na vašem serveru.</p></div>
+  <div class="card"><svg class="ic" aria-hidden="true"><use href="#i-zarovka"/></svg><h3>Učí se z každé chyby</h3><p>Když se něco pokazí, agent zapíše poučení. Příště stejnou chybu neudělá a nikdo mu nemusí nic vysvětlovat znovu.</p></div>
+  <div class="card"><svg class="ic" aria-hidden="true"><use href="#i-pamet"/></svg><h3>Paměť je vždy aktuální</h3><p>Změníte postup nebo ceník? Paměť se do pár minut sama aktualizuje a agenti hned pracují podle nového.</p></div>
+ </div>
+</div></section>
+
+<section id="u-vas"><div class="wrap reveal">
+ <div class="eyebrow">100 % open source</div>
+ <h2>Celá firma na jednom malém serveru.</h2>
+ <p class="sub">Na jednom serveru s 32–64 GB paměti poběží nejen tým agentů, ale <b>celá firma se všemi aplikacemi</b>: firewall, přihlašování, dokumenty, CRM, chat, úkoly i dohled. <b>Všechno na open source</b>, bez poplatků za každého uživatele a bez závislosti na jednom dodavateli. Přesně takhle to provozujeme i u sebe. <a href="#stack">Co přesně tam běží ↓</a></p>
+ <div class="specs">
+  <div class="spec"><b>32–64 GB</b><span>paměti stačí pro firmu i agenty</span></div>
+  <div class="spec"><b>1 server</b><span>nebo vaše stávající PC</span></div>
+  <div class="spec"><b>0 Kč</b><span>za licence, vše open source</span></div>
+  <div class="spec"><svg class="ic m" aria-hidden="true"><use href="#i-fajfka"/></svg><span>citlivé kroky jen s vaším souhlasem</span></div>
+ </div>
+</div></section>
+
+<section id="zacit"><div class="wrap reveal">
+ <div class="eyebrow">Jak začít</div>
+ <h2>Čtyři kroky. Žádný velký skok do neznáma.</h2>
+ <div class="steps">
+  <div class="step"><div><b>Rozhovor (30 minut)</b><span>Co vás zdržuje, co jste zkoušeli a proč to nevyšlo.</span></div></div>
+  <div class="step"><div><b>Zkušební provoz na jedné úloze</b><span>2–4 týdny na skutečné práci. Měříme ušetřený čas, chyby a náklady.</span></div></div>
+  <div class="step"><div><b>Poctivé vyhodnocení</b><span>Když se to nevyplatí, řekneme vám to. Když ano, uvidíte přesně proč.</span></div></div>
+  <div class="step"><div><b>Rozšíření</b><span>Další agenti, celé oddělení nebo celá firma. Tempem, které vám dává smysl.</span></div></div>
+ </div>
+</div></section>
+
+<section id="stack"><div class="wrap reveal">
+ <div class="eyebrow">Celá firma na open source</div>
+ <h2>Co všechno na tom jednom serveru běží</h2>
+ <p class="sub">Osvědčené a rozšířené programy s otevřeným kódem. Za žádný z nich neplatíte licenci a všechny umíme nasadit, propojit a udržovat.</p>
+ <div class="stack">
+  <div class="sg"><h3><svg class="ic s" aria-hidden="true"><use href="#i-zed"/></svg>Síť a bezpečnost</h3><p><b>OPNsense</b> firewall a router · <b>Suricata</b> detekce útoků · <b>OpenVPN / WireGuard</b> vzdálený přístup · <b>nginx</b> vstupní brána s certifikáty <b>Let's Encrypt</b></p></div>
+  <div class="sg"><h3><svg class="ic s" aria-hidden="true"><use href="#i-klic"/></svg>Identita a přihlašování</h3><p><b>FreeIPA</b> jeden účet pro lidi, agenty i servery včetně oprávnění · <b>Authelia</b> jedno přihlášení do všech aplikací, i dvoufázové · <b>Vaultwarden</b> firemní trezor hesel</p></div>
+  <div class="sg"><h3><svg class="ic s" aria-hidden="true"><use href="#i-kufr"/></svg>Firemní aplikace</h3><p><b>Nextcloud</b> soubory, kalendáře, kontakty · <b>EspoCRM</b> zákazníci a obchod · <b>Rocket.Chat</b> firemní chat i s agenty · <b>Forgejo</b> úkoly, schvalování a kód · <b>Metabase</b> přehledy a reporty</p></div>
+  <div class="sg"><h3><svg class="ic s" aria-hidden="true"><use href="#i-cip"/></svg>AI a agenti</h3><p><b>Ollama</b> vlastní modely na serveru pro specifické úlohy · <b>LiteLLM</b> jedno místo pro přístup ke všem modelům · <b>Open WebUI</b> chat s AI pro zaměstnance · <b>SearXNG</b> soukromé vyhledávání · <b>Langfuse</b> co agenti dělají a kolik to stojí · sdílená paměť agentů</p></div>
+  <div class="sg"><h3><svg class="ic s" aria-hidden="true"><use href="#i-puls"/></svg>Dohled a zálohy</h3><p><b>Zabbix</b> hlídá servery, služby i agenty · šifrované zálohy (<b>GnuPG</b>) na vlastní NAS · historie všech nastavení v <b>gitu</b></p></div>
+  <div class="sg"><h3><svg class="ic s" aria-hidden="true"><use href="#i-vrstvy"/></svg>Základ</h3><p><b>Linux</b> (Ubuntu, AlmaLinux) · <b>KVM</b> virtuální servery · <b>Docker</b> kontejnery · oddělené sítě (VLAN) pro veřejné weby, aplikace a agenty</p></div>
+ </div>
+ <p class="note">Agenti pracují se špičkovými modely (Claude, ChatGPT). Modely přímo na vašem serveru umíme přidat tam, kde se hodí: na jednoduchou rutinu, na citlivá data nebo pro provoz bez internetu. Osobní údaje do cloudu nepošleme, nahradíme je smyšlenými.</p>
+</div></section>
+
+<section class="final"><div class="wrap reveal">
+ <div class="card">
+  <img src="agentera-logo.svg" alt="" style="width:84px;height:84px">
+  <h2>Nepovedlo se? Pojďte to zkusit s námi.</h2>
+  <p class="sub" style="margin:0 auto 24px">Napište, co jste zkoušeli. Ozveme se s návrhem prvního kroku.</p>
+  <a class="btn" href="mailto:info@agentera.cz">info@agentera.cz</a>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 agentera · agentura pro AI</div></footer>
+
+<script>
+(function(){
+ var bg=document.getElementById('bg-in'),rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ function par(){if(!rm)bg.style.translate='0 '+(-window.scrollY*0.3)+'px';}
+ window.addEventListener('scroll',par,{passive:true});par();
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}})},{threshold:.12});
+ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
