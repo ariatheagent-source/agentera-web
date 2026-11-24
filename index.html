@@ -75,6 +75,8 @@ footer{border-top:1px solid var(--edge);padding:28px 0;color:#6f9e90;font-size:1
 .stack{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:26px}.sg{background:var(--card);border:1px solid var(--edge);border-radius:16px;padding:18px 20px}.sg h3{margin:0 0 8px;font-size:17px;color:var(--mint)}.sg p{margin:0;color:#c3e4d8;font-size:14.5px;line-height:1.7}.sg b{color:var(--text)}.note{color:var(--muted);font-size:14px;margin-top:18px}
 .ic{display:block;width:46px;height:46px;padding:10px;margin-bottom:12px;border-radius:13px;background:linear-gradient(145deg,#0e3b3a,#071016);border:1px solid #72e5ba55;box-shadow:0 0 18px #1fa88a33,inset 0 0 12px #1fa88a22;stroke:var(--mint);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;overflow:visible}.ic use{filter:drop-shadow(0 0 3px #72e5ba88)}.ic.s{display:inline-block;width:32px;height:32px;padding:6px;margin:0 10px 0 0;border-radius:9px;vertical-align:middle}.ic.m{margin:0 auto 6px;width:40px;height:40px;padding:8px}.rung .ic{margin:0}
 .tymy-h{margin:34px 0 0;font-size:22px}.tymy{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,470px),1fr));margin-top:16px}.tym{border-radius:18px;padding:20px;border:1px solid;background:var(--card)}.tym.ops{border-color:#16a34a77;background:rgba(22,163,74,.09)}.tym.dev{border-color:#d9770677;background:rgba(217,119,6,.09)}.tym.sec{border-color:#2563eb77;background:rgba(37,99,235,.11)}.tym.bo{border-color:#72e5ba66;background:rgba(31,168,138,.09)}.tym-h{display:flex;align-items:center}.tym h3{margin:0;font-size:19px}.tym small{color:var(--muted);font-size:13px}.tym>p{color:#c3e4d8;font-size:14.5px;margin:12px 0 14px}.ags{display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:10px 6px}.ag{min-width:0;text-align:center;font-size:12px;color:var(--muted);line-height:1.3}.ag b{display:block;color:var(--text);font-size:12px;letter-spacing:-.1px;margin-top:6px}.ag img{width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid var(--edge);box-shadow:0 0 14px #1fa88a44;display:block;margin:0 auto}.ic.t{width:60px;height:60px;padding:15px;margin:0 auto;border-radius:50%}
+.promo{padding:0 0 26px}.promo a.box{display:flex;gap:14px;align-items:center;text-decoration:none;color:#f7eef3;border-radius:14px;padding:10px 16px;border:1px solid rgba(232,163,184,.3);background:linear-gradient(120deg,rgba(196,106,146,.18),rgba(42,20,48,.7) 60%);transition:border-color .2s}.promo a.box:hover{border-color:#e8a3b8}.promo img{width:30px;height:30px;flex:none;filter:drop-shadow(0 0 8px #e8a3b866)}.promo .pt{flex:1;min-width:0;font-size:15px}.promo .pt b{color:#e8a3b8;font-weight:700}.promo .pb{white-space:nowrap;color:#e8a3b8;font-weight:700;font-size:14px}
+@media(max-width:760px){.promo .pt{font-size:13.5px}.promo .pb{display:none}}
 @media(max-width:760px){nav{display:none}.split{grid-template-columns:1fr}.rung{margin-right:0!important}.hero{min-height:auto;padding-top:40px}section{padding:56px 0}}
 @media(prefers-reduced-motion:reduce){#bg-in{animation:none}.reveal{opacity:1;transform:none}.brain{animation:none}}
 </style>
@@ -85,7 +87,7 @@ footer{border-top:1px solid var(--edge);padding:28px 0;color:#6f9e90;font-size:1
 
 <header><div class="wrap">
  <a class="brand" href="#"><img src="agentera-logo.svg" alt=""><span><b>agentera<i class="tld">.cz</i></b><small>AGENTURA PRO AI</small></span></a>
- <nav><a href="#proc">Kde to drhne</a><a href="#nabidka">Co nabízíme</a><a href="#agentura">Agentura</a><a href="#uceni">Učení</a><a href="#u-vas">U vás</a><a href="#zacit">Jak začít</a><a href="#stack">Open source</a></nav>
+ <nav><a href="#proc">Kde to drhne</a><a href="#nabidka">Co nabízíme</a><a href="#agentura">Agentura</a><a href="#uceni">Učení</a><a href="#u-vas">U vás</a><a href="#zacit">Jak začít</a><a href="#stack">Open source</a><a href="inkubator.html" style="color:#e8a3b8">🌸 Inkubátor</a></nav>
 </div></header>
 
 <main>
@@ -95,6 +97,10 @@ footer{border-top:1px solid var(--edge);padding:28px 0;color:#6f9e90;font-size:1
  <h1>Váš průvodce<br><span>dobou agentů.</span></h1>
  <p class="lead">Nasadit AI agenty může být jednodušší, než se zdá. Jen je potřeba vědět <b>jak</b>. Zkoušeli jste to a nevyšlo? Nevyplatilo se to, agent dělal chyby, nebo zkušební projekt skončil v šuplíku? <b>Pak to pojďte zkusit s námi.</b></p>
  <div class="cta"><a class="btn" href="#zacit">Pojďte to zkusit s námi</a><a class="btn ghost" href="#proc">Proč to často nevyjde</a></div>
+</div></section>
+
+<section class="promo"><div class="wrap">
+ <a class="box" href="inkubator.html"><img src="agentera-logo-ruzove.svg" alt=""><span class="pt"><b>🌸 Novinka: AI aplikační inkubátor</b> · máte nápad na aplikaci? Postavte ji s námi.</span><span class="pb">Více →</span></a>
 </div></section>
 
 <section id="proc"><div class="wrap reveal">
